@@ -22,4 +22,5 @@ def selection_sort(arr)
   
   # Exibindo o array classificado
   puts "Array Ordenado:"
+  puts arr.join(", ")
   
