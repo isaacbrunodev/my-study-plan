@@ -13,3 +13,22 @@ def merge(arr, left, mid, right)
       if left_array[index_of_sub_array_one] <= right_array[index_of_sub_array_two]
         arr[index_of_merged_array] = left_array[index_of_sub_array_one]
         index_of_sub_array_one += 1
+    else
+      arr[index_of_merged_array] = right_array[index_of_sub_array_two]
+      index_of_sub_array_two += 1
+    end
+    index_of_merged_array += 1
+  end
+
+  while index_of_sub_array_one < sub_array_one
+    arr[index_of_merged_array] = left_array[index_of_sub_array_one]
+    index_of_sub_array_one += 1
+    index_of_merged_array += 1
+  end
+
+  while index_of_sub_array_two < sub_array_two
+    arr[index_of_merged_array] = right_array[index_of_sub_array_two]
+    index_of_sub_array_two += 1
+    index_of_merged_array += 1
+  end
+end      
